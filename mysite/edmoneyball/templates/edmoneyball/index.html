@@ -1,0 +1,170 @@
+<!-- CS 122 Project: EdMoneyBall
+Homepage, showcases what our site can do with links to other components
+Created by: Vi Nguyen, Sirui Feng, Turab Hassan
+-->
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "edmoneyball/head.html" %}
+
+<body>
+
+    {% include 'edmoneyball/navbar.html' %}
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>EdMoneyBall</h1>
+            <br>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Information on 
+                Elementary Schools in Chicago: <br>
+                Find Out More!</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Are you looking to compare, and find the schools that 
+                        fit your needs?</h2>
+                    <p class="lead">We've merged expenditure, performance, and 
+                        diversity measures available from Chicago Public Schools 
+                        to help you visualize, compare, find, and understand 
+                        each school better.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Overview -->
+     <section id="explore" class = "explore">
+        <div class="container">
+            {% block explore %}
+
+            {% endblock %}
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Comparisons -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more 
+        information, visit http://fontawesome.io/examples/ -->
+    <section id="compare" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>What You Can Do </h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary">
+                                </i>
+                            </span>
+                                <h4>
+                                    <strong>Explore a School</strong>
+                                </h4>
+                                <p>Find your school(s). We'll explore its 
+                                    expenditures, performance, and diversity. 
+                                    <br></br><br></br></p>
+                                <a href="http://127.0.0.1:8000/edmoneyball/explore" 
+                                    class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary">
+                                </i>
+                            </span>
+                                <h4>
+                                    <strong>Compare up to 5 Schools</strong>
+                                </h4>
+                                <p>Select your schools. We'll compare their 
+                                    expenditures, performance, and diversity. 
+                                    <br></br><br></br><p>
+                                <a href="http://127.0.0.1:8000/edmoneyball/comparisontool" 
+                                    class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Find Your Top 5 Schools</strong>
+                                </h4>
+                                <p>Enter your preferences on performance, 
+                                        diversity, and location. We'll 
+                                        recommend the top 5 performing schools 
+                                        that meet your thresholds.<br></br></p>
+                                <a href="http://127.0.0.1:8000/edmoneyball/recommendationtool" 
+                                    class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Read Our Methodology</strong>
+                                </h4>
+                                <p>Curious about the data we used or the 
+                                    calculations? We share the details here. 
+                                <br></br><br></br></p>
+                                <a href="http://127.0.0.1:8000/edmoneyball/methodology" 
+                                class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>EdMoneyBall</strong>
+                    </h4>
+                    <p>University of Chicago - MSCAPP '17<br>A CS 122 Project
+                    </p>
+                    <p>Created by Sirui Feng, Turab Hassan, and Vi Nguyen</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://twitter.com/uchicagocapp" 
+                                target="_blank">
+                                <i class="fa fa-twitter fa-fw fa-3x">
+                            </i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Edmoneyball 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% include "edmoneyball/javascript.html" %}
+</body>
+
+</html>
