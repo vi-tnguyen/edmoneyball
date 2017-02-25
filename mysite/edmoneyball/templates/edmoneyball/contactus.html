@@ -1,0 +1,14 @@
+<form id="contactform" method="POST">
+    <input type="text" name="name" placeholder="Your name">
+    <input type="email" name="_replyto" placeholder="Your email">
+    <input type="hidden" name="_subject" value="Edmoneyball Site Feedback" />
+    <input type="hidden" name="_next" value="http://edmoneyball.pythonanywhere.com/" />
+
+    <textarea name="message" placeholder="What did you want to share with us?"></textarea>
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="submit" value="Send. And we'll take you back to the home page">
+</form>
+<script>
+    var contactform =  document.getElementById('contactform');
+    contactform.setAttribute('action', '//formspree.io/' + 'nguyenvi613' + '@' + 'gmail' + '.' + 'com');
+</script>
